@@ -13,7 +13,7 @@ namespace DrawingTool
         {
             char[][] window = windowArea;
             for (int lineLength = 0; lineLength < lineCoordinates.Count; lineLength++)
-                window[lineCoordinates[lineLength].Y][lineCoordinates[lineLength].X] = '*';
+                window[lineCoordinates[lineLength].Y+1][lineCoordinates[lineLength].X+1] = '*';
 
             return windowArea;
         }
@@ -45,7 +45,7 @@ namespace DrawingTool
         {
             for (int row = 0; row < window.Length; row++)
             {
-                for (int column = 0; column < window[0].Length; column++)
+                for (int column = 0; window[row]!=null && column < window[0].Length; column++)
                     Console.Write(window[row][column]);
                 Console.WriteLine();
             }

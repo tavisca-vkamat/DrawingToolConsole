@@ -23,18 +23,19 @@ namespace DrawingTool
             XmlConfigurator.Configure();
             logger.Debug("Programm starts ");
             int userChoice;
-            char[][] windowArea = new char[30][];
-            windowArea = DrawingShapes.SetBorder(windowArea, 130, 30);
+            char[][] windowArea = new char[32][];
+            windowArea = DrawingShapes.SetBorder(windowArea, 132, 32);
+            Console.SetWindowSize(150,40);
             do
             {
                 /* Menu for user */
-                Console.Write("\n\n---------------MENU---------------\n1.Line\n2.Circle\n3.Rectangle\n4.Exit\nEnter Choice: ");
+                Console.Write("\n\n---------------MENU---------------\n1.Horizontal Line\n2.Vertical Line\n3.Circle\n4.Rectangle\n5.Exit\nEnter Choice: ");
                 userChoice = int.Parse(Console.ReadLine());
-                Console.WriteLine("Window width (130*30)\n");
+                Console.WriteLine("Window width (129*29)\n");
 
                 switch (userChoice)
                 {
-                    case 1:/* Line drawing */
+                    case 1:/* Line drawing horizontal */
                         try
                         {
                             Line line = ObjectFactory.GetInstanceHorizontalLine();
@@ -54,12 +55,34 @@ namespace DrawingTool
                         }
                         catch (Exception exception)
                         {
-                            logger.Error("in line Draw exception: " + exception.ToString());
-                            Console.ReadLine();
+                            logger.Error("in horizontal line Draw exception: " + exception.ToString());
+                        }
+                        break;
+                    case 2:/* line drawing vertical */
+                        try
+                        {
+                            Line line = ObjectFactory.GetInstanceVerticalLine();
+
+                            Console.Write("Enter start point of line (x1,y1): ");
+                            Point startPoint = GetPoint(Console.ReadLine());
+
+                            Console.Write("Enter start point of line (x2,y2): ");
+                            Point endPoint = GetPoint(Console.ReadLine());
+
+                            List<Point> lineCoordinates = line.Draw(startPoint, endPoint);
+                            windowArea = DrawingShapes.AddShapeToWindow(windowArea, lineCoordinates);
+
+                            DrawingShapes.DrawWindow(windowArea);
+
+                            logger.Info("line draw successful");
+                        }
+                        catch (Exception exception)
+                        {
+                            logger.Error("in vertical line Draw exception: " + exception.ToString());
                         }
                         break;
 
-                    case 2:/* Circle drawing */
+                    case 3:/* Circle drawing */
                         try
                         {
                             Ellipse circle = ObjectFactory.GetInstanceCircle();
@@ -82,7 +105,7 @@ namespace DrawingTool
 
                         break;
 
-                    case 3:/* Rectangle drawing */
+                    case 4:/* Rectangle drawing */
                         try
                         {
                             Rectangle rectangle = ObjectFactory.GetInstanceNormalRectangle();
@@ -90,7 +113,7 @@ namespace DrawingTool
                             Console.Write("Enter start point of diagonal (x1,y1): ");
                             Point startPoint = GetPoint(Console.ReadLine());
 
-                            Console.Write("Enter start point of diagonal (x2,y2): ");
+                            Console.Write("Enter end point of diagonal (x2,y2): ");
                             Point endPoint = GetPoint(Console.ReadLine());
 
                             List<Point> rectangleCoordinates = rectangle.Draw(startPoint,endPoint);
@@ -99,23 +122,22 @@ namespace DrawingTool
 
                             DrawingShapes.DrawWindow(windowArea);
 
-                            logger.Info("line draw successful");
+                            logger.Info("rectangle draw successful");
                         }
                         catch (Exception exception)
                         {
                             logger.Error("in rectangle Draw exception: " + exception.ToString());
                         }
                         break;
-                    case 4:/* Exit */
+                    case 5:/* Exit */
                         Console.WriteLine("\nThank you come again!!!");
                         break;
-
                     default:
                         Console.WriteLine("\nInvalid input");
                         break;
                 }
             }
-            while (userChoice!=4);
+            while (userChoice!=5);
         }
     }
 }

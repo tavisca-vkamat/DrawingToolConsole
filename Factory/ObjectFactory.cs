@@ -33,5 +33,13 @@ namespace Factory
             Ellipse circle = container.Resolve<Ellipse>();
             return circle;
         }
+        
+        static public Line GetInstanceVerticalLine()
+        {
+            IUnityContainer container = new UnityContainer();
+            container.RegisterType(typeof(Line), typeof(VerticalLine));
+            Line line = container.Resolve<Line>();
+            return line;
+        }
     }
 }

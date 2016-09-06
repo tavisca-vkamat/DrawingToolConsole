@@ -22,6 +22,17 @@ namespace Drawing.Tests
 
         [TestMethod]
         [ExpectedException(typeof(Exception))]
+        public void TestVerticalLineDraw()
+        {
+            Line line = ObjectFactory.GetInstanceVerticalLine();
+
+            List<Point> lineCoordinates = line.Draw(new Point(10, 10), new Point(11, 20));
+
+            Assert.IsNotNull(lineCoordinates);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
         public void TestCircleDraw()
         {
             Ellipse circle = ObjectFactory.GetInstanceCircle();

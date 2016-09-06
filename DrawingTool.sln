@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawingTool", "DrawingTool\DrawingTool.csproj", "{C0F1BE76-A82B-4986-912F-E0221A0D76AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validator", "Validator\Validator.csproj", "{B822B2B4-C2AE-4B8D-96C5-906045EA3C6E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawingManager", "DrawingManager\DrawingManager.csproj", "{9F21C78E-D306-4BF3-8A54-A45E38DEF91F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drawing.Tests", "Drawing.Tests\Drawing.Tests.csproj", "{E74147E0-A671-4B4E-8A71-7EDCFEA986B3}"
@@ -23,10 +21,6 @@ Global
 		{C0F1BE76-A82B-4986-912F-E0221A0D76AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0F1BE76-A82B-4986-912F-E0221A0D76AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0F1BE76-A82B-4986-912F-E0221A0D76AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B822B2B4-C2AE-4B8D-96C5-906045EA3C6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B822B2B4-C2AE-4B8D-96C5-906045EA3C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B822B2B4-C2AE-4B8D-96C5-906045EA3C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B822B2B4-C2AE-4B8D-96C5-906045EA3C6E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9F21C78E-D306-4BF3-8A54-A45E38DEF91F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9F21C78E-D306-4BF3-8A54-A45E38DEF91F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F21C78E-D306-4BF3-8A54-A45E38DEF91F}.Release|Any CPU.ActiveCfg = Release|Any CPU

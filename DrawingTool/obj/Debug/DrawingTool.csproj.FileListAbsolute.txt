@@ -8,10 +8,8 @@ C:\Users\vkamat\documents\visual studio 2015\Projects\DrawingTool\DrawingTool\bi
 C:\Users\vkamat\documents\visual studio 2015\Projects\DrawingTool\DrawingTool\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
 C:\Users\vkamat\documents\visual studio 2015\Projects\DrawingTool\DrawingTool\bin\Debug\Microsoft.Practices.Unity.dll
 C:\Users\vkamat\documents\visual studio 2015\Projects\DrawingTool\DrawingTool\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
-C:\Users\vkamat\documents\visual studio 2015\Projects\DrawingTool\DrawingTool\bin\Debug\Validator.dll
 C:\Users\vkamat\documents\visual studio 2015\Projects\DrawingTool\DrawingTool\bin\Debug\DrawingManager.pdb
 C:\Users\vkamat\documents\visual studio 2015\Projects\DrawingTool\DrawingTool\bin\Debug\Factory.pdb
-C:\Users\vkamat\documents\visual studio 2015\Projects\DrawingTool\DrawingTool\bin\Debug\Validator.pdb
 C:\Users\vkamat\documents\visual studio 2015\Projects\DrawingTool\DrawingTool\bin\Debug\log4net.xml
 C:\Users\vkamat\documents\visual studio 2015\Projects\DrawingTool\DrawingTool\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 C:\Users\vkamat\documents\visual studio 2015\Projects\DrawingTool\DrawingTool\bin\Debug\Microsoft.Practices.ServiceLocation.xml
